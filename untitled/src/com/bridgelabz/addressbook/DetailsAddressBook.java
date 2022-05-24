@@ -1,6 +1,20 @@
 package com.bridgelabz.addressbook;
 
 public class DetailsAddressBook {
+    @Override
+    public String toString() {
+        return "DetailsAddressBook{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", zip=" + zip +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
+    }
+
     private String firstName;
     private String lastName;
     private String address;

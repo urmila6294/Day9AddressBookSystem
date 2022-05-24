@@ -1,15 +1,14 @@
 package com.bridgelabz.addressbook;
+
+import java.util.ArrayList;
 import java.util.Scanner;
+public class AddOrRemove {
+    ArrayList<DetailsAddressBook> detailsAddressBookArrayList = new ArrayList<>();
+    //    Scanner scanner = new Scanner(System.in);
 
-public class AddressBook {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Address Book Program");
-        OptionMenu operation = new OptionMenu(); // created object of OptionMenu
-        operation.operation();
 
-    }
-}
-   /* public static void getInput() {
+    public ArrayList addPerson() {
+
         DetailsAddressBook details = new DetailsAddressBook();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the following address details ");
@@ -45,7 +44,18 @@ public class AddressBook {
         details.setPhoneNumber(input.nextLong());
         System.out.println("Phone Number:" + details.getPhoneNumber());
 
+
+        detailsAddressBookArrayList.add(details);   //Adding details data
+        return detailsAddressBookArrayList;
+
     }
 
-}*/
-
+    public void displayPerson() {
+        if(detailsAddressBookArrayList.size() ==0){
+            System.out.println("Address book EMPTY: You must add the details in Address Book Contact ");
+        }else {
+            System.out.println("All contact =  " + detailsAddressBookArrayList.size());
+            System.out.println(detailsAddressBookArrayList);
+        }
+    }
+}
