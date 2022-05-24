@@ -133,4 +133,25 @@ public class AddOrRemove {
         }
 
     }
+
+    public void removePerson() {
+        System.out.println("Enter a first name you want to delete...");
+        Scanner sc2 = new Scanner(System.in );
+        String removeName = sc2.next();
+
+        boolean found = false;
+        for (int i = 0; i < detailsAddressBookArrayList.size(); i++) {
+            if (detailsAddressBookArrayList.get(i).getFirstName().equals(removeName))
+            {
+                found = true;
+                detailsAddressBookArrayList.remove(i);
+            }
+
+        }
+        if (found) {
+            System.out.println("ADDRESS CONTACT BOOK IS DELETED SUCCESSFULLY");
+        } else {
+            System.out.println("First Name not found");
+        }
+    }
 }
